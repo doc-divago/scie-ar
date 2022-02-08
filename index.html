@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <!--The import of A-Frame libraries must take place here because it registers custom components that have to be available before a-scene is loaded. Always check to use latest versions. -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    
+    <!-- a-scene handles all of the setup that is required for 3D: setting up WebGL, the canvas, camera, lights, renderer, render loop as well as out of the box WebVR support on platforms such as HTC Vive, Oculus Rift, Samsung GearVR, and smartphones. -->
+
+    <a-scene>
+      <!--
+        This is the main scene of the web-app.
+        It represents a stylized info-point that has the following components:
+    
+        1. A background skybox. 
+          For now it has a uniform dark gray color.
+
+        2. A plane on which the visitor walks. 
+          It will be filled with a floorplan of the place to visit. The floor plan is centered in the center of the scene. The map in addition to the walls and other architectural elements of the place will contain some texts that facilitate the orientation of the visitor. For example: "Exit to the street". See the sketch.jpg image to get an idea.
+
+        3. One or more vertical info panels that show information.
+          The panel is rectangular and oriented as a portrait.
+          Each panel presents a slide show.
+          Slide 1 shows a recognizable image of a point of interest (PoI). For example, a painting.
+          Next slides are images containing info about the PoI. There is always at least one next slide. There is not an upper limit, but usually there will be 3-5 next slides.
+          A slide advances to the next one in the sequence when the user taps (or clicks) on its right side.
+          A slide goes back to the previous one in the sequence when the user taps (or clicks) on its left side.
+          Everytime the scene is loaded, it shows Slide 1. In other words, there is no need to keep memory of the slide shown currently: the scene resets every time it is loaded again.
+
+        4. One or more portals
+          A portal is a link to another scene (recorded on a different html file).
+          At the moment we can use vertical portrait rectangles like the info panels. Later on, we will make it easier to the visitor to tell portals from info panels.
+          The portal shows an image of the destination.
+          When the user hover the cursor over the portal a tag with the name of the destination appears. The tag disappears when the cursor moves away from the portal.
+          When the user clicks (or taps) the portal, a link to another html file is triggered and a new scene is uploaded.
+
+        5. A Help panel
+          It is a semi-transparent image containing the basic instructions for the visitor (keys to move, etc...)
+          It stands right in front the visitor when he/she enters the scene.
+          The visitor can move through it.
+
+        6. A camera
+          Of course, the scene must contain a camera.
+    -->
+
+        <a-assets>
+            
+        </a-assets>
+
+        <a-camera>
+          
+        </a-camera>
+      </a-scene>
+  </body>
+</html>
